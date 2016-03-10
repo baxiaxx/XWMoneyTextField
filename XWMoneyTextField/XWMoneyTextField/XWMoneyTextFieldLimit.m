@@ -42,12 +42,24 @@
     if (string && string.length > 0) {
         // 输入
         if (_tempText.length == 0) {
-            if ([string isEqualToString:@"0"] == NO || [string isEqualToString:@"."] == NO) {
+            if ([string isEqualToString:@"."]) {
+                _tempText = @"0";
+                return YES;
+            }else if ([string isEqualToString:@"0"]){
                 return YES;
             }
+            
+        }else if (_tempText.length == 1){
+            if ([_tempText isEqualToString:@"0"]) {
+                if ([string isEqualToString:@"."]) {
+                    return YES;
+                }else{
+                    return NO;
+                }
+            }
         }
-        // 输入后不可超过 _max 或 '99999.99'
-        if ([_tempText stringByAppendingString:string].floatValue > _max > 0.01 ? _max : 99999.99) {
+        // 输入后不可超过 '99999.99'
+        if ([_tempText stringByAppendingString:string].floatValue > 99999.99) {
             return NO;
         }
         // 不可超过8位

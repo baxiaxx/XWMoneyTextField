@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    CGRect frame = CGRectMake(30,100,200,44);
+    CGRect frame = CGRectMake(30,100,[UIScreen mainScreen].bounds.size.width - 60,44);
     XWMoneyTextField *tf = [[XWMoneyTextField alloc] initWithFrame:frame];
     tf.borderStyle = UITextBorderStyleRoundedRect;
     tf.placeholder = @"请输入金额";
