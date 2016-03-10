@@ -15,6 +15,8 @@
 		7685F2651C91C2BA003E6295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7685F2631C91C2BA003E6295 /* LaunchScreen.storyboard */; };
 		7685F2701C91C2BA003E6295 /* XWMoneyTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7685F26F1C91C2BA003E6295 /* XWMoneyTextFieldTests.m */; };
 		7685F27B1C91C2BA003E6295 /* XWMoneyTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7685F27A1C91C2BA003E6295 /* XWMoneyTextFieldUITests.m */; };
+		7685F28B1C91C2EC003E6295 /* XWMoneyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7685F28A1C91C2EC003E6295 /* XWMoneyTextField.m */; };
+		7685F28E1C91C396003E6295 /* XWMoneyTextFieldLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7685F28D1C91C396003E6295 /* XWMoneyTextFieldLimit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		7685F2761C91C2BA003E6295 /* XWMoneyTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XWMoneyTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7685F27A1C91C2BA003E6295 /* XWMoneyTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWMoneyTextFieldUITests.m; sourceTree = "<group>"; };
 		7685F27C1C91C2BA003E6295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7685F2891C91C2EC003E6295 /* XWMoneyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMoneyTextField.h; sourceTree = "<group>"; };
+		7685F28A1C91C2EC003E6295 /* XWMoneyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMoneyTextField.m; sourceTree = "<group>"; };
+		7685F28C1C91C396003E6295 /* XWMoneyTextFieldLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMoneyTextFieldLimit.h; sourceTree = "<group>"; };
+		7685F28D1C91C396003E6295 /* XWMoneyTextFieldLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMoneyTextFieldLimit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		7685F2541C91C2BA003E6295 /* XWMoneyTextField */ = {
 			isa = PBXGroup;
 			children = (
+				7685F2881C91C2DB003E6295 /* XWMoneyTextField */,
 				7685F2581C91C2BA003E6295 /* AppDelegate.h */,
 				7685F2591C91C2BA003E6295 /* AppDelegate.m */,
 				7685F25B1C91C2BA003E6295 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				7685F27C1C91C2BA003E6295 /* Info.plist */,
 			);
 			path = XWMoneyTextFieldUITests;
+			sourceTree = "<group>";
+		};
+		7685F2881C91C2DB003E6295 /* XWMoneyTextField */ = {
+			isa = PBXGroup;
+			children = (
+				7685F2891C91C2EC003E6295 /* XWMoneyTextField.h */,
+				7685F28A1C91C2EC003E6295 /* XWMoneyTextField.m */,
+				7685F28C1C91C396003E6295 /* XWMoneyTextFieldLimit.h */,
+				7685F28D1C91C396003E6295 /* XWMoneyTextFieldLimit.m */,
+			);
+			path = XWMoneyTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7685F25D1C91C2BA003E6295 /* ViewController.m in Sources */,
+				7685F28B1C91C2EC003E6295 /* XWMoneyTextField.m in Sources */,
+				7685F28E1C91C396003E6295 /* XWMoneyTextFieldLimit.m in Sources */,
 				7685F25A1C91C2BA003E6295 /* AppDelegate.m in Sources */,
 				7685F2571C91C2BA003E6295 /* main.m in Sources */,
 			);
