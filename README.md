@@ -6,7 +6,7 @@
 
 效果如下：
 
-![XWPageViewControlle](media/14576178349828/XWPageViewController.gif)
+![XWPageViewControlle](/XWPageViewController.gif)
 
 
 ```
