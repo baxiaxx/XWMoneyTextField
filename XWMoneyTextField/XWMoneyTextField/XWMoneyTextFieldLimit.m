@@ -16,6 +16,13 @@
 
 @implementation XWMoneyTextFieldLimit
 
+- (instancetype)init{
+    if (self = [super init]) {
+        _max = 99999.99;
+    }
+    return self;
+}
+
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     return YES;
@@ -45,7 +52,7 @@
             if ([string isEqualToString:@"."]) {
                 _tempText = @"0";
                 return YES;
-            }else if ([string isEqualToString:@"0"]){
+            }else{
                 return YES;
             }
             
@@ -59,7 +66,7 @@
             }
         }
         // 输入后不可超过 '99999.99'
-        if ([_tempText stringByAppendingString:string].floatValue > 99999.99) {
+        if ([_tempText stringByAppendingString:string].floatValue > _max) {
             return NO;
         }
         // 不可超过8位
