@@ -32,7 +32,7 @@
     
 }
 
-**#pragma mark - XWMoneyTextFieldLimitDelegate
+#pragma mark - XWMoneyTextFieldLimitDelegate
 - (void)valueChange:(id)sender{
     
     if ([sender isKindOfClass:[XWMoneyTextField class]]) {
@@ -40,7 +40,7 @@
         XWMoneyTextField *tf = (XWMoneyTextField *)sender;
         NSLog(@"XWMoneyTextField ChangedValue: %@",tf.text);
     }
-}**
+}
 
 @end
 ```
