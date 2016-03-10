@@ -25,7 +25,7 @@
     tf.placeholder = @"请输入金额";
     tf.keyboardType = UIKeyboardTypeDecimalPad;
     tf.limit.delegate = self;
-    tf.limit.max = 99999.99;
+    tf.limit.max = @"99999.99";
     [self.view addSubview:tf];
     
 }

@@ -14,7 +14,7 @@
 @interface XWMoneyTextFieldLimit : NSObject <UITextFieldDelegate>
 
 @property (nonatomic, assign) id <XWMoneyTextFieldLimitDelegate> delegate;
-@property (nonatomic, assign) CGFloat max; // 默认99999.99
+@property (nonatomic, strong) NSString *max; // 默认99999.99
 
 - (void)valueChange:(id)sender;
 

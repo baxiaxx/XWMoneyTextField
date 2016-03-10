@@ -18,7 +18,7 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        _max = 99999.99;
+        _max = @"99999.99";
     }
     return self;
 }
@@ -66,11 +66,11 @@
             }
         }
         // 输入后不可超过 '99999.99'
-        if ([_tempText stringByAppendingString:string].floatValue > _max) {
+        if ([_tempText stringByAppendingString:string].floatValue > [_max floatValue]) {
             return NO;
         }
         // 不可超过8位
-        if (_tempText.length >= 8) {
+        if (_tempText.length >= _max.length) {
             return NO;
         }
         
