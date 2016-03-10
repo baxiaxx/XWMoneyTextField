@@ -46,8 +46,8 @@
                 return YES;
             }
         }
-        // 输入后不可超过 '99999.99'
-        if ([_tempText stringByAppendingString:string].floatValue > 99999.99) {
+        // 输入后不可超过 _max 或 '99999.99'
+        if ([_tempText stringByAppendingString:string].floatValue > _max > 0.01 ? _max : 99999.99) {
             return NO;
         }
         // 不可超过8位
