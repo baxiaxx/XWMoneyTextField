@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    CGRect frame = CGRectMake(30,100,200,44);
+    CGRect frame = CGRectMake(30,100,[UIScreen mainScreen].bounds.size.width - 60,44);
     XWMoneyTextField *tf = [[XWMoneyTextField alloc] initWithFrame:frame];
     tf.borderStyle = UITextBorderStyleRoundedRect;
     tf.placeholder = @"请输入金额";
@@ -33,13 +33,14 @@
 }
 
 #pragma mark - XWMoneyTextFieldLimitDelegate
-- (void)valueChange:(id)sender{
+- (void)xwMoneyTextFieldValueChanged:(UITextField *)textField{
     
-    if ([sender isKindOfClass:[XWMoneyTextField class]]) {
-        
-        XWMoneyTextField *tf = (XWMoneyTextField *)sender;
-        NSLog(@"XWMoneyTextField ChangedValue: %@",tf.text);
-    }
+    NSLog(@"xwMoneyTextFieldValueChanged: %@",textField.text);
+}
+
+- (void)xwMoneyTextFieldDidEndEditing:(UITextField *)textField{
+    
+    NSLog(@"xwMoneyTextFieldDidEndEditing: %@",textField.text);
 }
 
 @end
