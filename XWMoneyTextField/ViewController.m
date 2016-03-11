@@ -31,13 +31,14 @@
 }
 
 #pragma mark - XWMoneyTextFieldLimitDelegate
-- (void)valueChange:(id)sender{
+- (void)xwMoneyTextFieldValueChanged:(UITextField *)textField{
     
-    if ([sender isKindOfClass:[XWMoneyTextField class]]) {
-        
-        XWMoneyTextField *tf = (XWMoneyTextField *)sender;
-        NSLog(@"XWMoneyTextField ChangedValue: %@",tf.text);
-    }
+    NSLog(@"xwMoneyTextFieldValueChanged: %@",textField.text);
+}
+
+- (void)xwMoneyTextFieldDidEndEditing:(UITextField *)textField{
+    
+    NSLog(@"xwMoneyTextFieldDidEndEditing: %@",textField.text);
 }
 
 @end

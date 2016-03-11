@@ -16,12 +16,15 @@
 @property (nonatomic, assign) id <XWMoneyTextFieldLimitDelegate> delegate;
 @property (nonatomic, strong) NSString *max; // 默认99999.99
 
-- (void)valueChange:(id)sender;
+- (void)valueChanged:(UITextField *)textField;
 
 @end
 
 @protocol XWMoneyTextFieldLimitDelegate <NSObject>
 
-- (void)valueChange:(id)sender;
+@optional
+
+- (void)xwMoneyTextFieldDidEndEditing:(UITextField *)textField;
+- (void)xwMoneyTextFieldValueChanged:(UITextField *)textField;
 
 @end

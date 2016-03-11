@@ -27,7 +27,7 @@
     if (self = [super initWithFrame:frame]) {
         self.delegate = self.limit;
         [self addTarget:self.limit
-                 action:@selector(valueChange:)
+                 action:@selector(valueChanged:)
        forControlEvents:UIControlEventEditingChanged];
     }
     return self;
@@ -63,6 +63,5 @@ return NO;
     }
     return _limit;
 }
-
 
 @end

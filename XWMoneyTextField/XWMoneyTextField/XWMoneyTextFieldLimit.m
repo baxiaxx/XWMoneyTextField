@@ -38,6 +38,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     
+    if (_delegate && [_delegate respondsToSelector:@selector(xwMoneyTextFieldDidEndEditing:)]) {
+        [_delegate xwMoneyTextFieldDidEndEditing:textField];
+    }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
@@ -105,10 +108,7 @@
 }
 
 #pragma mark TextFieleActions
-
-- (void)valueChange:(id)sender {
-    
-    UITextField *textField = (UITextField *)sender;
+- (void)valueChanged:(UITextField *)textField {
     
     NSRange docRange = [_tempText rangeOfString:@"."];
     if (_tempString && _tempString.length > 0) {
@@ -132,10 +132,9 @@
         textField.text = [_tempText substringToIndex:_tempText.length - 1];
     }
     
-    if (_delegate && [_delegate respondsToSelector:@selector(valueChange:)]) {
-        [_delegate valueChange:sender];
+    if (_delegate && [_delegate respondsToSelector:@selector(xwMoneyTextFieldValueChanged:)]) {
+        [_delegate xwMoneyTextFieldValueChanged:textField];
     }
-    
 }
 
 @end
